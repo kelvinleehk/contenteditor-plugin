@@ -2,7 +2,9 @@
 
 Edit content from front-end.
 
-http://octobercms.com/plugin/samuell-contenteditor
+https://github.com/kelvinleehk/contenteditor-plugin
+
+Package available in https://packagist.org/packages/onioncreative/contenteditor-plugin
 
 <img src="http://octobercms.com/storage/app/uploads/public/572/dfc/ec4/572dfcec4d675487425233.png">
 
