@@ -115,12 +115,12 @@ class ImageController extends Controller
         }
 
         return Response::json([
-            'url'   => $url,
+            'url'       => $url,
             'filePath'  => $relativeFilePath,
-            'width' => $width,
-            'crop'  => post('crop'),
-            'alt'   => post('alt'),
-            'size'  => [
+            'width'     => $width,
+            'crop'      => post('crop'),
+            'alt'       => post('alt'),
+            'size'      => [
                 $width,
                 $height
             ]
