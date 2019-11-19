@@ -1,4 +1,4 @@
-<?php namespace Samuell\ContentEditor\Models;
+<?php namespace OnionCreative\ContentEditor\Models;
 
 use File;
 use Lang;
@@ -10,15 +10,15 @@ class Settings extends Model
 {
     public $implement = ['System.Behaviors.SettingsModel'];
 
-    public $settingsCode = 'samuell_contenteditor_settings';
+    public $settingsCode = 'onioncreative_contenteditor_settings';
 
     public $settingsFields = 'fields.yaml';
 
-    const CACHE_KEY = 'samuell:contenteditor.additional_styles';
+    const CACHE_KEY = 'onioncreative:contenteditor.additional_styles';
 
     public function initSettingsData()
     {
-        $this->additional_styles = File::get(plugins_path() . '/samuell/contenteditor/assets/additional-css.css');
+        $this->additional_styles = File::get(plugins_path() . '/onioncreative/contenteditor/assets/additional-css.css');
     }
 
     // list of buttons

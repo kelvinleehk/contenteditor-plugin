@@ -7,40 +7,40 @@ tabs:
 
         ####
         enabled_buttons:
-            tab: samuell.contenteditor::lang.settings.main_settings
+            tab: onioncreative.contenteditor::lang.settings.main_settings
             span: left
-            label: samuell.contenteditor::lang.settings.main_settings
+            label: onioncreative.contenteditor::lang.settings.main_settings
             type: checkboxlist
         permissions:
-            tab: samuell.contenteditor::lang.settings.main_settings
+            tab: onioncreative.contenteditor::lang.settings.main_settings
             span: right
-            label: samuell.contenteditor::lang.settings.permissions
-            commentAbove: samuell.contenteditor::lang.settings.permissions_comment
+            label: onioncreative.contenteditor::lang.settings.permissions
+            commentAbove: onioncreative.contenteditor::lang.settings.permissions_comment
             default: 'cms.manage_content'
         image_folder:
-            tab: samuell.contenteditor::lang.settings.main_settings
+            tab: onioncreative.contenteditor::lang.settings.main_settings
             span: right
-            label: samuell.contenteditor::lang.settings.image_folder
-            commentAbove: samuell.contenteditor::lang.settings.image_folder_comment
+            label: onioncreative.contenteditor::lang.settings.image_folder
+            commentAbove: onioncreative.contenteditor::lang.settings.image_folder_comment
             default: 'contenteditor'
 
         ####
         style_palettes:
-            tab: samuell.contenteditor::lang.settings.style_palettes
-            label: samuell.contenteditor::lang.settings.style_palettes
-            commentAbove: samuell.contenteditor::lang.settings.style_palettes_desc
+            tab: onioncreative.contenteditor::lang.settings.style_palettes
+            label: onioncreative.contenteditor::lang.settings.style_palettes
+            commentAbove: onioncreative.contenteditor::lang.settings.style_palettes_desc
             type: repeater
             mode: array
             form:
                 fields:
                     name:
-                        label: samuell.contenteditor::lang.settings.name
+                        label: onioncreative.contenteditor::lang.settings.name
                         span: left
                     class:
-                        label: samuell.contenteditor::lang.settings.class
+                        label: onioncreative.contenteditor::lang.settings.class
                         span: right
                     allowed_tags:
-                        label: samuell.contenteditor::lang.settings.allowed_tags
+                        label: onioncreative.contenteditor::lang.settings.allowed_tags
                         default: "['p','div','img']"
                         type: taglist
                         mode: array
@@ -48,8 +48,8 @@ tabs:
 
         ####
         additional_styles:
-            tab: samuell.contenteditor::lang.settings.additional_styles
-            label: samuell.contenteditor::lang.settings.additional_styles_label
+            tab: onioncreative.contenteditor::lang.settings.additional_styles
+            label: onioncreative.contenteditor::lang.settings.additional_styles_label
             type: codeeditor
             size: giant
             language: css

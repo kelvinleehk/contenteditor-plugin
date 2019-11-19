@@ -1,4 +1,4 @@
-<?php namespace Samuell\ContentEditor;
+<?php namespace OnionCreative\ContentEditor;
 
 use System\Classes\PluginBase;
 
@@ -18,7 +18,7 @@ class Plugin extends PluginBase
         return [
             'name'        => 'Content Editor',
             'description' => 'Front-end content editor',
-            'author'      => 'Samuell',
+            'author'      => 'Onion Creative',
             'icon'        => 'icon-edit'
         ];
     }
@@ -26,7 +26,7 @@ class Plugin extends PluginBase
     public function registerComponents()
     {
         return [
-            'Samuell\ContentEditor\Components\ContentEditor' => 'contenteditor',
+            'OnionCreative\ContentEditor\Components\ContentEditor' => 'contenteditor',
         ];
     }
 
@@ -37,9 +37,9 @@ class Plugin extends PluginBase
                 'label'       => 'Content Editor Settings',
                 'description' => 'Manage main editor settings.',
                 'icon'        => 'icon-cog',
-                'class'       => 'Samuell\ContentEditor\Models\Settings',
+                'class'       => 'OnionCreative\ContentEditor\Models\Settings',
                 'order'       => 500,
-                'permissions' => ['samuell.contenteditor.access_settings']
+                'permissions' => ['onioncreative.contenteditor.access_settings']
             ]
         ];
     }
@@ -47,7 +47,7 @@ class Plugin extends PluginBase
     public function registerPermissions()
     {
         return [
-            'samuell.contenteditor.access_settings' => [
+            'onioncreative.contenteditor.access_settings' => [
                 'tab' => 'Content Editor',
                 'label' => 'Access content editor settings'
             ],
