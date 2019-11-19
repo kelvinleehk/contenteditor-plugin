@@ -1,7 +1,7 @@
-<?php namespace Samuell\ContentEditor\Http\Middleware;
+<?php namespace OnionCreative\ContentEditor\Http\Middleware;
 
 use Closure;
-use Samuell\ContentEditor\Models\Settings;
+use OnionCreative\ContentEditor\Models\Settings;
 use Backend\Facades\BackendAuth;
 
 class EditorPermissionsMiddleware

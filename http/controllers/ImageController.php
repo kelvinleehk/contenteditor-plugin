@@ -1,4 +1,4 @@
-<?php namespace Samuell\ContentEditor\Http\Controllers;
+<?php namespace OnionCreative\ContentEditor\Http\Controllers;
 
 use ApplicationException;
 use Exception;
@@ -9,8 +9,8 @@ use Illuminate\Routing\Controller;
 use October\Rain\Database\Attach\Resizer;
 use Cms\Classes\MediaLibrary;
 use Cms\Helpers\File as FileHelper;
-use Samuell\ContentEditor\Models\Settings;
-use Samuell\ContentEditor\Http\Middleware\EditorPermissionsMiddleware;
+use OnionCreative\ContentEditor\Models\Settings;
+use OnionCreative\ContentEditor\Http\Middleware\EditorPermissionsMiddleware;
 use October\Rain\Support\Facades\Str;
 
 class ImageController extends Controller

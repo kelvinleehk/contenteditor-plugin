@@ -1,4 +1,4 @@
-<?php namespace Samuell\ContentEditor\Components;
+<?php namespace OnionCreative\ContentEditor\Components;
 
 use Cache;
 use File;
@@ -7,7 +7,7 @@ use Cms\Classes\Content;
 use Cms\Classes\CmsObject;
 use Cms\Classes\ComponentBase;
 
-use Samuell\ContentEditor\Models\Settings;
+use OnionCreative\ContentEditor\Models\Settings;
 
 class ContentEditor extends ComponentBase
 {
