@@ -14,6 +14,12 @@ class Settings extends Model
 
     public $settingsFields = 'fields.yaml';
 
+    // override this variable to add additional buttons
+    public $additionalButtons = [];
+
+    // override this variable to add additional allowed tags
+    public $additionalAllowedTags = [];
+
     const CACHE_KEY = 'onioncreative:contenteditor.additional_styles';
 
     public function initSettingsData()
@@ -24,59 +30,65 @@ class Settings extends Model
     // list of buttons
     public function getEnabledButtonsOptions()
     {
-        return [
-            'bold'           => 'Bold (b)',
-            'italic'         => 'Italic (i)',
-            'link'           => 'Link (a)',
+        return array_merge(
+            [
+                'bold'           => 'Bold (b)',
+                'italic'         => 'Italic (i)',
+                'link'           => 'Link (a)',
 
-            'align-left'     => 'Align left',
-            'align-center'   => 'Align center',
-            'align-right'    => 'Align right',
+                'align-left'     => 'Align left',
+                'align-center'   => 'Align center',
+                'align-right'    => 'Align right',
 
-            'heading'        => 'Heading (h1)',
-            'subheading'     => 'Subheading (h2)',
+                'heading'        => 'Heading (h1)',
+                'subheading'     => 'Subheading (h2)',
 
-            'subheading3'    => 'Subheading3 (h3)',
-            'subheading4'    => 'Subheading4 (h4)',
-            'subheading5'    => 'Subheading5 (h5)',
+                'subheading3'    => 'Subheading3 (h3)',
+                'subheading4'    => 'Subheading4 (h4)',
+                'subheading5'    => 'Subheading5 (h5)',
 
-            'paragraph'      => 'Paragraph (p)',
-            'unordered-list' => 'Unordered list (ul)',
-            'ordered-list'   => 'Ordered list (ol)',
+                'paragraph'      => 'Paragraph (p)',
+                'unordered-list' => 'Unordered list (ul)',
+                'ordered-list'   => 'Ordered list (ol)',
 
-            'table'          => 'Table',
-            'indent'         => 'Indent',
-            'unindent'       => 'Unindent',
-            'line-break'     => 'Line-break (br)',
+                'table'          => 'Table',
+                'indent'         => 'Indent',
+                'unindent'       => 'Unindent',
+                'line-break'     => 'Line-break (br)',
 
-            'image'          => 'Image upload',
-            'video'          => 'Video',
-            'preformatted'   => 'Preformatted (pre)',
-        ];
+                'image'          => 'Image upload',
+                'video'          => 'Video',
+                'preformatted'   => 'Preformatted (pre)',
+            ],
+            $this->additionalButtons
+        );
     }
 
     // list of allowed tags
     public function getAllowedTagsOptions()
     {
-        return [
-            'p',
-            'img',
-            'div',
-            'table',
-            'span',
-            'small',
+        return array_merge(
+            [
+                'p',
+                'img',
+                'div',
+                'table',
+                'span',
+                'small',
 
-            'h1',
-            'h2',
-            'h3',
-            'h4',
-            'h5',
-            'h6',
+                'h1',
+                'h2',
+                'h3',
+                'h4',
+                'h5',
+                'h6',
 
-            'b',
-            'i',
-            'strong',
-        ];
+                'b',
+                'i',
+                'strong',
+            ],
+            $this->additionalAllowedTags
+        );
     }
 
     public function afterSave()
